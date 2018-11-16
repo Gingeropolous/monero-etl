@@ -24,21 +24,29 @@ Usage
 -----------
 
 1. Clone the repo
-2. Create virtualenv & activate it
+2. Open terminal or command line
+3. Start Monerod
+4. Start monero-wallet-rpc
+3. Create virtualenv & activate it
 
 .
 
     python3 -m venv .venv
     source .venv/bin/activate
 
-3. Install dependencies
+4. Install dependencies
 
 .
 
     pip install -r requirements.txt -r test_requirements.txt
     pip install git+https://github.com/emesik/monero-python.git
 
-4. Do your thing
+5. Navigate to the directory above monero-etl folder
 
-5. Run tests
+6. Run tool
+First time it is run, you will be asked for the details to connect to your monero rpc.
+Outputted file will be in your current directory
+.
+
+    python monero-etl
 
