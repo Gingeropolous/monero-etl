@@ -26,14 +26,14 @@ Usage
 1. Clone the repo
 2. Create virtualenv & activate it
 
-.. code-block:: bash
+.
 
     python3 -m venv .venv
     source .venv/bin/activate
 
 3. Install dependencies
 
-.. code-block:: bash
+.
 
     pip install -r requirements.txt -r test_requirements.txt
     pip install git+https://github.com/emesik/monero-python.git
@@ -42,4 +42,3 @@ Usage
 
 5. Run tests
 
-.. code-block:: bash
