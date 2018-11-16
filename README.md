@@ -34,7 +34,7 @@ Usage
     python3 -m venv .venv
     source .venv/bin/activate
 
-4. Install dependencies
+4. Within the monero-etl directory: install dependencies
 
 .
 
