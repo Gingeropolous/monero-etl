@@ -13,7 +13,7 @@ Want to help?
 
 If you find this project useful, please consider a donation to the following address: 
 
-* 88ie1Zyr2v1bsJFUQBscA4Aq1cv5M1nmsCSj7dPxfiewGbKuJkqwG15MTGQLTo5K3oGaEdDbhDp7QiTSPoxC2SyQUp1deri
+* 41q64QdRUTWfHDcFFhdD5XDwPR6RVY6haPWEgih66HB3XzDwv2naW2CSYvsJsbgpRMTYZ5KW9wMSTJekHM8Tpjj6N7GQREi
 
 Please support developers that made this project possible:
 
