@@ -40,15 +40,15 @@ def main():
                     'beanCounter' : beanCounter}
 
     target = input("Specify the target storage format (csv): ")
+    currency = input("Specify the target currency (USD, XMR, BTC, etc): ")
 
-    if target:
-        targets[target](mywallet)
+    if target and currency:
+        targets[target](mywallet, currency=currency)
     else:
         targets['csv'](mywallet) #default
 
     print(target + " ETL action completed.")
 
     print("Please donate for further development")
-    print("")
 
 

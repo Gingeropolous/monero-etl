@@ -8,10 +8,12 @@ import time
 class target(object):
     min_height = 0
     mywallet = None
+    currency = None
 
-    def __init__(self, mywallet, min_height=0):
+    def __init__(self, mywallet, min_height=0, currency='XMR'):
         self.mywallet = mywallet
         self.min_height = min_height
+        self.currency = currency
         self.etl()
 
     def extract(self):
@@ -53,8 +55,12 @@ class csvfile(target):
         balance = 0
 
         # calculate balance for each line item after debit or credit
+        i = 0
+        lines = len(lineitems)
         for lineitem in lineitems:
-            balance = lineitem.calcBalance(balance)
+            i += 1
+            finalBalance = True if lines == i else False
+            balance = lineitem.calcBalance(balance, self.currency, finalBalance)
 
         # most recent tx should be on top with most recent balance
         lineitems = sorted(lineitems, key=lambda lineitem: lineitem.timestamp, reverse=True)
@@ -95,7 +101,7 @@ class csvfile(target):
                     if field == "Network Fee":
                         row.append(lineitem.transaction_fee)
                     if field == "Balance":
-                        row.append(lineitem.balance)
+                        row.append(str(lineitem.balance) + ' ' + self.currency)
 
                 # write the line item into csv
                 writer.writerow(row)
