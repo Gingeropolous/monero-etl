@@ -1,10 +1,10 @@
-from targets import csvfile
+from targets.target import *
 from monero.wallet import Wallet
 from monero.backends.jsonrpc import JSONRPCWallet
 from requests.exceptions import ConnectionError
 from configurator.jsonrpc import RPCconfig
 
-__version__ = '0.0.1'
+__version__ = '0.0.2'
 
 def source():
     myConfig = RPCconfig.configure()
@@ -28,16 +28,6 @@ def source():
         print('Trouble connecting to Monero RPC at: ' + myRpc)
         return e
 
-
-def csv(mywallet):
-    csvfile.etl(mywallet)
-
-def SQL(mywallet):
-    print('Yet to be developed')
-
-def beanCounter(mywallet):
-    print('Yet to be developed')
-
 def main():
 
     try:
@@ -45,7 +35,7 @@ def main():
     except:
         print(mywallet)
 
-    targets = {'csv' : csv,
+    targets = {'csv' : csvfile,
                     'SQL' : SQL,
                     'beanCounter' : beanCounter}
 
