@@ -13,8 +13,38 @@ Want to help?
 
 If you find this project useful, please consider a donation to the following address: 
 
-* 88ie1Zyr2v1bsJFUQBscA4Aq1cv5M1nmsCSj7dPxfiewGbKuJkqwG15MTGQLTo5K3oGaEdDbhDp7QiTSPoxC2SyQUp1deri
+* 41q64QdRUTWfHDcFFhdD5XDwPR6RVY6haPWEgih66HB3XzDwv2naW2CSYvsJsbgpRMTYZ5KW9wMSTJekHM8Tpjj6N7GQREi
 
 Please support developers that made this project possible:
 
 * https://github.com/emesik/monero-python
+
+
+Usage
+-----------
+
+1. Clone the repo
+2. Open terminal or command line
+3. Start Monerod
+4. Start monero-wallet-rpc
+5. In the director above monero-etl
+6. Create virtualenv & activate it
+
+.
+
+    python3 -m venv .venv
+    source .venv/bin/activate
+
+7. Install monero-python
+
+.
+
+    pip install git+https://github.com/emesik/monero-python.git
+
+6. Run tool
+First time it is run, you will be asked for the details to connect to your monero rpc.
+Outputted file will be in your current directory
+.
+
+    python monero-etl
+
