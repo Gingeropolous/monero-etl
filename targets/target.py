@@ -68,7 +68,7 @@ class csvfile(target):
         return lineitems
 
     def load(self, lineitems):
-        with open(time.strftime("%d-%m-%Y") + '_xmr.csv', 'w') as csvfile:
+        with open('Monero-ETL-'+time.strftime("%d-%m-%Y") + '_'+self.currency+'.csv', 'w') as csvfile:
             writer = csv.writer(csvfile)
 
             fieldnames = []
@@ -101,7 +101,9 @@ class csvfile(target):
                     if field == "Network Fee":
                         row.append(lineitem.transaction_fee)
                     if field == "Balance":
-                        row.append(str(lineitem.balance) + ' ' + self.currency)
+                        row.append(str(lineitem.balance))
+                    if field == "Currency":
+                        row.append(self.currency)
 
                 # write the line item into csv
                 writer.writerow(row)
