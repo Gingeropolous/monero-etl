@@ -1,7 +1,7 @@
 # monero-etl
 Tool to get your personal transaction data out of the Monero blockchain into other data formats.
 
-* release 0.0.1
+* release 0.0.2
 * Currently supports csv destination
 * Additional  destinations planned: SQL and BeanCounter
 * open source: https://github.com/tiedtoastar/monero-etl/
