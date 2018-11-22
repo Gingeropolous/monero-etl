@@ -1,0 +1,5 @@
+pysha3
+requests
+six
+monero-python
+
